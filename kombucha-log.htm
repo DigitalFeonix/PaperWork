@@ -19,16 +19,18 @@
         .form-underline {
             border-bottom: 1pt solid black;
         }
-        .flex-grow-2 {
-            flex-grow: 2;
-        }
         .cell-caption {
             font-size: 0.9rem;
             margin-top: -0.5rem;
             margin-left: -0.3rem;
             margin-bottom: 4rem;
         }
+        table.table-bordered th,
+            table.table-bordered td {
+                border-color: #999;
+            }
 
+        /* enable the table heads to print the way we want - MUST turn on background color/images in print dialog */
         @media print {
             table.table thead.thead-dark th {
                 color: #fff !important;
@@ -48,25 +50,49 @@
 
     <h3>First Fermentation</h3>
 
-    <div class="d-flex flex-row my-3 mt-4">
-        <div class="pr-4"><strong>Batch Number/Name</strong></div>
-        <div class="flex-grow-2 form-underline"></div>
-        <div class="px-4"><strong>Yield</strong></div>
-        <div class="flex-grow-1 form-underline"></div>
+    <div class="row my-3 mt-4">
+        <div class="col-8">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Batch Number/Name</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Yield</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
     </div>
 
-    <div class="d-flex flex-row my-3">
-        <div class="pr-4"><strong>Brew Type</strong></div>
-        <div class=""> <img src="icons/square.svg" alt="" width="16" height="16"> Batch &nbsp; <img src="icons/square.svg" alt="" width="16" height="16"> Continuous </div>
-        <div class="px-4"><strong>Date Begun</strong></div>
-        <div class="flex-grow-1 form-underline"></div>
+    <div class="row my-3">
+        <div class="col-4">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Brew Type</strong></div>
+                <div class=""> <img src="icons/square.svg" alt="" width="16" height="16"> Batch &nbsp; <img src="icons/square.svg" alt="" width="16" height="16"> Continuous </div>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Date Begun</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
     </div>
 
-    <div class="d-flex flex-row my-3">
-        <div class="pr-4"><strong>Average Room Temp.</strong></div>
-        <div class="flex-grow-1 form-underline"></div>
-        <div class="px-4"><strong>Storage Location</strong></div>
-        <div class="flex-grow-1 form-underline"></div>
+    <div class="row my-3">
+        <div class="col-4">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Average Room Temp.</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Storage Location</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
     </div>
 
     <table class="table table-bordered my-4">
@@ -173,44 +199,82 @@
         </tbody>
     </table>
 
-    <div class="d-flex flex-row my-3">
-        <div class="pr-4"><strong>Date Complete</strong></div>
-        <div class="flex-grow-1 form-underline"></div>
-        <div class="px-4"><strong>Days in First Fermentation</strong></div>
-        <div class="flex-grow-1 form-underline"></div>
-        <div class="flex-grow-1"></div>
+    <div class="row my-3">
+        <div class="col-4">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Date Complete</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Days in First Fermentation</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
     </div>
 
 </div>
 
 <div class="container mt-5" style="page-break-before: always">
 
-
     <h3>Second Fermentation</h3>
 
-    <div class="d-flex flex-row my-3 mt-4">
-        <div class="pr-4"><strong>Recipe Name</strong></div>
-        <div class="flex-grow-2 form-underline"></div>
-        <div class="px-4"><strong>Date Bottled</strong></div>
-        <div class="flex-grow-1 form-underline"></div>
+    <div class="row my-3 mt-4">
+        <div class="col-8">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Recipe Name</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Date Bottled</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
     </div>
 
-    <div class="d-flex flex-row my-3">
-        <div class="pr-4"><strong>Bottle Type</strong></div>
-        <div class="flex-grow-1 form-underline"></div>
-        <div class="px-4"><strong>Bottle Volume</strong></div>
-        <div class="flex-grow-1 form-underline"></div>
-        <div class="px-4"><strong>Bottles Used</strong></div>
-        <div class="flex-grow-1 form-underline"></div>
+    <div class="row my-3">
+        <div class="col-6">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Bottle Type</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Bottle Volume</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Bottles Used</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
     </div>
 
-    <div class="d-flex flex-row my-3">
-        <div class="pr-4"><strong>Batch Used</strong></div>
-        <div class="flex-grow-1 form-underline"></div>
-        <div class="px-4"><strong>Average Room Temp.</strong></div>
-        <div class="flex-grow-1 form-underline"></div>
-        <div class="px-4"><strong>Storage Location</strong></div>
-        <div class="flex-grow-1 form-underline"></div>
+    <div class="row my-3">
+        <div class="col-3">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Batch Used</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Average Room Temp.</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
+        <div class="col-5">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Storage Location</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
     </div>
 
     <table class="table table-bordered my-4">
@@ -315,18 +379,28 @@
         </tbody>
     </table>
 
-    <div class="d-flex flex-row my-3">
-        <div class="pr-4"><strong>Date Refrigerated</strong></div>
-        <div class="flex-grow-1 form-underline"></div>
-        <div class="px-4"><strong>Days in Second Fermentation</strong></div>
-        <div class="flex-grow-1 form-underline"></div>
-        <div class="flex-grow-1"></div>
+    <div class="row my-3">
+        <div class="col-4">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Date Refrigerated</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Days in Second Fermentation</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
     </div>
 
-    <div class="d-flex flex-row my-3">
-        <div class="pr-4"><strong>Total Days (Start to Finish)</strong></div>
-        <div class="flex-grow-1 form-underline"></div>
-        <div class="flex-grow-2"></div>
+    <div class="row my-3">
+        <div class="col-4">
+            <div class="d-flex flex-row">
+                <div class="pr-3"><strong>Total Days (Start to Finish)</strong></div>
+                <div class="flex-grow-1 form-underline"></div>
+            </div>
+        </div>
     </div>
 
 </div>
